@@ -35,6 +35,10 @@ class GitHub implements ProviderInterface
      */
     public function process($payload)
     {
+        if (!isset($payload['ref'])) {
+            throw new \InvalidArgumentException('The payload does not seem to come from GitHub.');
+        }
+
         $branch = $this->repo->getCurrentBranch();
         $pulled = false;
 

@@ -35,6 +35,10 @@ class Bitbucket implements ProviderInterface
      */
     public function process($payload)
     {
+        if (!isset($payload['commits']) && !isset($payload['commits'][0]['branch'])) {
+            throw new \InvalidArgumentException('The payload does not seem to come from Bitbucket.');
+        }
+
         $branch = $this->repo->getCurrentBranch();
         $pulled = false;
 
