@@ -17,8 +17,8 @@
     },
     "repositories": [
         {
-            "type": "git",
-            "url":  "git://github.com/ornicar/php-git-repo.git"
+            "type": "vcs",
+            "url":  "https://github.com/ornicar/php-git-repo"
         }
     ],
     "autoload": {
