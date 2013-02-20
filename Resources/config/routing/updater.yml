@@ -1,0 +1,7 @@
+ed_updater:
+    pattern: /
+    defaults: { _controller: EdwinesUpdaterBundle:Updater:index }
+
+ed_updater_hook:
+    resource: "@EdUpdaterBundle/Resources/config/routing/hook.yml"
+    prefix:   /hook

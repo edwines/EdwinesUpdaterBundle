@@ -1,0 +1,5 @@
+ed_updater_hook:
+    pattern: /
+    defaults: { _controller: EdwinesUpdaterBundle:Updater:hook }
+    requirements:
+        _method: post

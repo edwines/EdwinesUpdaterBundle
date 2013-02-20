@@ -1,0 +1,11 @@
+parameters:
+    ed_updater.git.class: Edwines\UpdaterBundle\Service\GitContainer
+
+services:
+    ed_updater.git:
+        class: %ed_updater.git.class%
+        arguments: [%ed_updater.repo_path%, %ed_updater.executable_path%]
+
+    ed_updater.provider:
+        class: %ed_updater.provider.class%
+        arguments: [@ed_updater.git]
