@@ -16,7 +16,7 @@ use Edwines\UpdaterBundle\Service\GitContainer;
 /**
  * Payload: {@link https://help.github.com/articles/post-receive-hooks}
  *
- * @todo
+ * @author Edwin Ibarra <edwines@feniaz.com>
  */
 class GitHub implements ProviderInterface
 {
@@ -34,5 +34,17 @@ class GitHub implements ProviderInterface
      * {@inheritdoc}
      */
     public function process($payload)
-    {}
+    {
+        $branch = $this->repo->getCurrentBranch();
+        $pulled = false;
+
+        if ($branch == basename($payload['ref'])) {
+            $this->repo->git(sprintf('pull origin %s', $branch));
+            $this->repo->git('submodule init');
+            $this->repo->git('submodule update');
+            $pulled = true;
+        }
+
+        return $pulled;
+    }
 }
