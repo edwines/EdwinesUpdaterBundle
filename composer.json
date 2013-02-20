@@ -1,0 +1,30 @@
+{
+    "name": "edwines/updater-bundle",
+    "description": "Symfony2 Bundle that allows updating the git repository, through services hooks (POST data)",
+    "keywords": ["git","updater", "symfony2", "bundle"],
+    "homepage": "http://github.com/edwines",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Edwin Ibarra",
+            "email": "edwines@feniaz.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.2",
+        "symfony/framework-bundle": "2.*",
+        "ornicar/php-git-repo": "dev-master"
+    },
+    "repositories": [
+        {
+            "type": "git",
+            "url":  "git://github.com/ornicar/php-git-repo.git"
+        }
+    ],
+    "autoload": {
+        "psr-0": {
+            "Edwines\\UpdaterBundle": ""
+        }
+    },
+    "target-dir": "Edwines/UpdaterBundle"
+}
