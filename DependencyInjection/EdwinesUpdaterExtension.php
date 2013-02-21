@@ -38,6 +38,16 @@ class EdwinesUpdaterExtension extends Extension
             throw new \InvalidArgumentException("The configuration node 'repo_path' is not set for EdwinesUpdaterBundle");
         }
 
+        if (false == class_exists($config['provider'])) {
+            throw new \InvalidArgumentException(sprintf("The provider class {%s} does not exists (EdwinesUpdaterBundle)", $config['provider']));
+        }
+
+        $providerInterface = 'Edwines\UpdaterBundle\Provider\ProviderInterface';
+
+        if (!in_array($providerInterface, class_implements($config['provider']))) {
+            throw new \InvalidArgumentException(sprintf("The provider class {%s} need to implements %s (EdwinesUpdaterBundle)", $config['provider'], $providerInterface));
+        }
+
         $container->setParameter('ed_updater.repo_path', $config['repo_path']);
         $container->setParameter('ed_updater.executable_path', $config['executable_path']);
         $container->setParameter('ed_updater.provider.class', $config['provider']);

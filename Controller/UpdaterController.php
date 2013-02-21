@@ -40,7 +40,7 @@ class UpdaterController extends Controller
         // If the repo is pulled, then clear the cache
         if ($this->get('ed_updater.provider')->process($payload)) {
             $application = new Application($this->get('kernel'));
-            $application->run(new StringInput('cache:clear --env=prod'));
+            $application->run(new StringInput('cache:clear --env=prod --no-warmup'));
 
             if(extension_loaded('apc') && ini_get('apc.enabled')) {
                 apc_clear_cache();
