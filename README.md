@@ -74,23 +74,23 @@ edwines_updater:
 If you want to have all the routes (the route for update the system, and another
 one to see the git status)
 
-``yml
+```yml
 # app/config/routing.yml
 
 ed_updater:
     resource: "@EdwinesUpdaterBundle/Resources/config/routing/updater.yml"
     prefix:   /my-updater-prefix
-``
+```
 
 Or if only want the route to update the project:
 
-``yml
+```yml
 # app/config/routing.yml
 
 ed_updater:
     resource: "@EdwinesUpdaterBundle/Resources/config/routing/hook.yml"
     prefix:   /my-hook-prefix
-``
+```
 
 ### Step 5: Add POST service to your provider
 
