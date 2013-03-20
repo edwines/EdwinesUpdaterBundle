@@ -58,7 +58,7 @@ Set the directory of the repository
 # app/config/config.yml
 
 edwines_updater:
-    repo_path: %kernel.root_dir%/../../
+    repo_path: %kernel.root_dir%/../
 ```
 By default the provider is GitHub, if you want to use Bitbucket:
 
