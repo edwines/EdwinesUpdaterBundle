@@ -1,5 +1,5 @@
 <h3>git status</h3>
-<code>{{ repo.git('status')|replace({'\n': '<br />'})|raw }}</code>
+<code>{{ repo.git('status')|nl2br }}</code>
 
 <h3>git log --oneline -n 5</h3>
-<code>{{ repo.git('log --oneline -n 5')|replace({'\n': '<br />'})|raw }}</code>
+<code>{{ repo.git('log --oneline -n 5')|nl2br }}</code>
