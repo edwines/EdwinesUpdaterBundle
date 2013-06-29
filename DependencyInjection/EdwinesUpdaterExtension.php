@@ -48,7 +48,9 @@ class EdwinesUpdaterExtension extends Extension
             throw new \InvalidArgumentException(sprintf("The provider class {%s} need to implements %s (EdwinesUpdaterBundle)", $config['provider'], $providerInterface));
         }
 
-        $container->setParameter('ed_updater.repo_path', $config['repo_path']);
+        $repoPath = $config['repo_path'] ?: $container->getParameter('kernel.root_dir').'/../';
+
+        $container->setParameter('ed_updater.repo_path', $repoPath);
         $container->setParameter('ed_updater.executable_path', $config['executable_path']);
         $container->setParameter('ed_updater.provider.class', $config['provider']);
     }

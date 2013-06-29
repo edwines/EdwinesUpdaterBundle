@@ -31,7 +31,7 @@ class Configuration implements ConfigurationInterface
 
         $rootNode
             ->children()
-                ->scalarNode('repo_path')->cannotBeEmpty()->end()
+                ->scalarNode('repo_path')->defaultValue(false)->end()
                 ->scalarNode('executable_path')->defaultValue('/usr/bin/git')->end()
                 ->scalarNode('provider')->defaultValue('Edwines\UpdaterBundle\Provider\GitHub')->end()
             ->end();

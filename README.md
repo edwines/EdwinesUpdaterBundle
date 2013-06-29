@@ -52,13 +52,17 @@ public function registerBundles()
 
 ### Step 3: Configure the bundle
 
-Set the directory of the repository
+By default you don't need to set the configuration. But if you want to change the
+default values, just follow the next instructions:
+
+The bundle set the directory of the repository to `%kernel.root_dir%/../` to edit
+it just set the `repo_path`:
 
 ```yml
 # app/config/config.yml
 
 edwines_updater:
-    repo_path: %kernel.root_dir%/../
+    repo_path: /project/repository/path/
 ```
 By default the provider is GitHub, if you want to use Bitbucket:
 
