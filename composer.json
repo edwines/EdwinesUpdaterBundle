@@ -15,12 +15,6 @@
         "symfony/framework-bundle": "2.*",
         "ornicar/php-git-repo": "dev-master"
     },
-    "repositories": [
-        {
-            "type": "vcs",
-            "url":  "https://github.com/ornicar/php-git-repo.git"
-        }
-    ],
     "autoload": {
         "psr-0": {
             "Edwines\\UpdaterBundle": ""
