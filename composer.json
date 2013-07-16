@@ -1,8 +1,9 @@
 {
     "name": "edwines/updater-bundle",
     "description": "Symfony2 Bundle that allows updating the git repository, through services hooks (POST data)",
-    "keywords": ["git","updater", "symfony2", "bundle"],
+    "keywords": ["git","update", "symfony2", "bundle"],
     "homepage": "http://github.com/edwines",
+    "type": "symfony-bundle",
     "license": "MIT",
     "authors": [
         {
@@ -20,5 +21,10 @@
             "Edwines\\UpdaterBundle": ""
         }
     },
-    "target-dir": "Edwines/UpdaterBundle"
+    "target-dir": "Edwines/UpdaterBundle",
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0.x-dev"
+        }
+    }
 }
