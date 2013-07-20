@@ -1,5 +1,8 @@
 # Updater Bundle
 
+[![Total Downloads](https://poser.pugx.org/edwines/updater-bundle/downloads.png)](https://packagist.org/packages/edwines/updater-bundle)
+[![Latest Unstable Version](https://poser.pugx.org/edwines/updater-bundle/v/unstable.png)](https://packagist.org/packages/edwines/updater-bundle)
+
 This bundle allow updating the repository in production; using git
 service hooks provided by some git hosting system (like GitHub). Currently these
 providers are supported:
