@@ -103,7 +103,7 @@ ed_updater:
 
 Now, you need to add a new service hook in your provider (see the 
 [GitHub help][1]). Your hook url will be 
-``http://my-domain.com/my-updater-prefix/hook/`` of if you configure to only use
+``http://my-domain.com/my-updater-prefix/hook/`` or if you configure to only use
 the hook url: ``http://my-domain.com/my-hook-prefix/``
 
 ## How it works
