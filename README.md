@@ -1,6 +1,7 @@
 # Updater Bundle
 
 [![Total Downloads](https://poser.pugx.org/edwines/updater-bundle/downloads.png)](https://packagist.org/packages/edwines/updater-bundle)
+[![Latest Stable Version](https://poser.pugx.org/edwines/updater-bundle/v/stable.png)](https://packagist.org/packages/edwines/updater-bundle)
 [![Latest Unstable Version](https://poser.pugx.org/edwines/updater-bundle/v/unstable.png)](https://packagist.org/packages/edwines/updater-bundle)
 
 This bundle allow updating the repository in production; using git
