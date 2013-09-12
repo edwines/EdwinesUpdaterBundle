@@ -28,7 +28,7 @@ Add the following dependency in your composer.json
 ```json
 {
     "require": {
-        "edwines/updater-bundle": "dev-master",
+        "edwines/updater-bundle": "1.0.*",
     }
 }
 ```
